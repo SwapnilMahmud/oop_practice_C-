@@ -86,3 +86,15 @@ int main(){
     for(i=0;i<4;i++)cout<<"pop s1"<<s1.pop()<<"\n";
     for(i=0;i<4;i++)cout<<"pop s2"<<s2.pop()<<"\n";
 }
+/////////
+#include<iostream>
+using namespace std;
+int main(){
+    int i;
+    cout<<"Enter number:";
+    cin>>i;
+    int j, fact=1;
+    for(j=i;j>=1;j--)fact=fact*j;
+    cout<<"factorial is"<<fact;
+    return 0;
+}
