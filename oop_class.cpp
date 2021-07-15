@@ -35,3 +35,54 @@ using namespace std;
      cout<<ob1.a<<"\n";
      cout<<ob2.a<<"\n";
  }
+ ///////////
+ #include<iostream>
+using namespace std;
+#define SIZE 10
+class stack{
+    char stck[SIZE];
+    int tos;
+    public:
+    void init();
+    void push(char ch);
+    char pop();
+    
+};
+
+void stack::init(){
+    tos=0;
+}
+void stack::push(char ch){
+    if(tos==SIZE){
+        cout<<"stack is full";
+        return ;
+    }
+    stck[tos]=ch;
+    tos++;
+}
+char stack::pop(){
+    if(tos==0){
+        cout<<"stack is empty";
+        return 0;
+    }
+    tos--;
+    return stck[tos];
+}
+
+
+int main(){
+    stack s1,s2;
+    int i;
+    s1.init();
+    s2.init();
+    s1.push('a');
+    s1.push('x');
+    s1.push('v');
+    s1.push('d');
+    s2.push('q');
+    s2.push('w');
+    s2.push('e');
+    s2.push('o');
+    for(i=0;i<4;i++)cout<<"pop s1"<<s1.pop()<<"\n";
+    for(i=0;i<4;i++)cout<<"pop s2"<<s2.pop()<<"\n";
+}
